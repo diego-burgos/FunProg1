@@ -1,0 +1,42 @@
+Algoritmo calcularcostototaldepoliza
+	//DEFINIR VARIABLES
+	Definir costPA,costPB,presFPA,presFPB,sumPorcAB Como Real
+	Definir edad Como Entero
+	Definir PAh,PuL,PtE Como Cadena
+	//INICIALIZAR VALORES
+	costPA<-1200 
+	costPB<-950
+	sumPorcAB<-0
+	//DATOS DE ENTRADA
+	Escribir "Ingrese su edad : "
+	Leer edad
+	Escribir "Usted bebe alcohol? : "
+	Leer PAh
+	Escribir "Usted usa lentes? : "
+	Leer PuL
+	Escribir "Usted cadece de alguna enfermedad? : "
+	Leer PtE
+	//PROCESO
+	si edad>40 Entonces
+		sumPorcAB<-sumPorcAB+20
+	SiNo
+		sumPorcAB<-sumPorcAB+10
+	FinSi
+	si Mayusculas(PAh)=="SI" Entonces
+		sumPorcAB<-sumPorcAB+10
+	FinSi
+	si Mayusculas(PuL)=="SI" Entonces
+		sumPorcAB<-sumPorcAB+5
+	FinSi
+	si Mayusculas(PtE)=="SI" Entonces
+		sumPorcAB<-sumPorcAB+5
+	FinSi
+	presFPA<-costPA+(costPA*sumPorcAB)
+	//CONVERSION
+	sumPorcAB<-sumPorcAB/100
+	presFPA<-costPA+(costPA*sumPorcAB)
+	presFPB<-costPB+(costPB*sumPorcAB)
+	//DATOS DE SALIDA
+	Escribir "El costo para el plan A es : ", presFPA, "Dolares"
+	Escribir "El costo para el plan B es : ", presFPB, "Dolares"
+FinAlgoritmo

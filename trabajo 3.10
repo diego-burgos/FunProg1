@@ -1,0 +1,23 @@
+Algoritmo calcularpreciototaldevacaciones
+	//DEFINIR VARIABLE
+	Definir lugar como cadena
+	Definir costoxK,costototal,totalkilometro Como Real
+	//DATOS DE ENTRADA
+	Escribir "Ingrese el lugar en donde  desee pasar vacaciones : "
+	Leer lugar
+	Escribir "Ingrese el costo por kilometro : "
+	Leer costoxK
+	//PROCESO
+	segun lugar hacer
+		"mexico"o"mèxico" : totalkilometro<-2*750
+		"PV" : totalkilometro<-2*800
+		"AC" : totalkilometro<-2*1200
+		"CA" : totalkilometro<-2*1800
+		De Otro Modo:
+			totalkilometro<-2*0
+			Escribir  "Se queda en casa"
+	FinSegun
+	costototal<-(totalkilometro*costoxK)
+	//DATOS DE SALIDA
+	Escribir "El costo total de sus vacaciones a : ",lugar," Es de : ",costototal," Pesos"
+FinAlgoritmo
